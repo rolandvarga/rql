@@ -1,4 +1,4 @@
-package cmd
+package main
 
 import (
 	"bufio"
@@ -12,7 +12,6 @@ var (
 )
 
 func main() {
-
 	reader := bufio.NewReader(os.Stdin)
 	for {
 		fmt.Printf("rql> ")
@@ -30,20 +29,24 @@ func main() {
 	}
 }
 
+type StatementType int
+
 const (
-	Insert = iota + 1
+	Insert StatementType = iota + 1
 	Select
 	Update
 	Delete
 )
 
 type Statement struct {
-	Type int
+	Type StatementType
 }
 
 func (s *Statement) Execute() {}
 
-func parseInput(statement string) (string, error) {
-	return "", inputParseError
-	return "", nil
+func parseInput(input string) (Statement, error) {
+	if false {
+		return Statement{}, inputParseError
+	}
+	return Statement{}, nil
 }
