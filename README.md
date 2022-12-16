@@ -1,0 +1,1 @@
+An SQL like query language for manipulating JSON objects in Redis
