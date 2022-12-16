@@ -1,3 +1,3 @@
-module github/rolandvarga/redis-sql
+module github/rolandvarga/rql
 
 go 1.19
